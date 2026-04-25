@@ -2,6 +2,8 @@ import React from 'react';
 import PriceCard from '../components/PriceCard';
 import MarketChart from '../components/MarketChart';
 import Watchlist from '../components/Watchlist';
+import FearAndGreed from '../components/FearAndGreed';
+import LiveTradeFeed from '../components/LiveTradeFeed';
 
 const Dashboard = () => {
   return (
@@ -18,6 +20,15 @@ const Dashboard = () => {
         </div>
         <div style={{ gridColumn: 'span 4' }}>
           <Watchlist />
+        </div>
+      </div>
+      
+      <div className="grid-layout" style={{ marginTop: '8px' }}>
+        <div style={{ gridColumn: 'span 4' }}>
+          <FearAndGreed />
+        </div>
+        <div style={{ gridColumn: 'span 8' }}>
+          <LiveTradeFeed />
         </div>
       </div>
     </div>
