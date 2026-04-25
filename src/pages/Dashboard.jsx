@@ -4,6 +4,7 @@ import MarketChart from '../components/MarketChart';
 import Watchlist from '../components/Watchlist';
 import FearAndGreed from '../components/FearAndGreed';
 import LiveTradeFeed from '../components/LiveTradeFeed';
+import SwapCard from '../components/SwapCard';
 
 const Dashboard = () => {
   return (
@@ -19,7 +20,7 @@ const Dashboard = () => {
           <MarketChart />
         </div>
         <div style={{ gridColumn: 'span 4' }}>
-          <Watchlist />
+          <SwapCard />
         </div>
       </div>
       
@@ -27,7 +28,10 @@ const Dashboard = () => {
         <div style={{ gridColumn: 'span 4' }}>
           <FearAndGreed />
         </div>
-        <div style={{ gridColumn: 'span 8' }}>
+        <div style={{ gridColumn: 'span 4' }}>
+          <Watchlist />
+        </div>
+        <div style={{ gridColumn: 'span 4' }}>
           <LiveTradeFeed />
         </div>
       </div>
