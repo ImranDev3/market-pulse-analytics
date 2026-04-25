@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #0b0e14;
+  --bg-surface: #151a22;
+  --bg-surface-hover: #1f2633;
+  --border-light: #2a3142;
+  
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  
+  --color-up: #10b981;
+  --color-down: #ef4444;
+  --color-accent: #3b82f6;
+  
+  --bg-up: rgba(16, 185, 129, 0.1);
+  --bg-down: rgba(239, 68, 68, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-surface);
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topbar {
+  height: 64px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background-color: var(--bg-main);
+}
+
+.page-wrapper {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* Components */
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price-value {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.badge-up { color: var(--color-up); background-color: var(--bg-up); padding: 4px 8px; border-radius: 6px; font-weight: 600; font-size: 12px; }
+.badge-down { color: var(--color-down); background-color: var(--bg-down); padding: 4px 8px; border-radius: 6px; font-weight: 600; font-size: 12px; }
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
